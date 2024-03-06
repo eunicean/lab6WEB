@@ -61,3 +61,5 @@
 {"timestamp":"2024-03-06T05:15:10.081Z","method":"GET","path":"/posts/1","payload":{}}
 {"timestamp":"2024-03-06T05:15:22.721Z","method":"POST","path":"/posts","payload":{"title":"Cookie Run Kindom's Best Tank","cookieName":"Financier","battle_role":"Tank","abilityDesc":"Shield, healing and light type damage","content":"Best tank","skins":"Zodiac"}}
 {"timestamp":"2024-03-06T05:15:32.396Z","method":"GET","path":"/posts","payload":{}}
+{"timestamp":"2024-03-06T05:25:56.438Z","method":"DELETE","path":"/posts/3","payload":{"title":"Cookie Run Kindom's Best Tank","cookieName":"Financier","battle_role":"Tank","abilityDesc":"Shield, healing and light type damage","content":"Best tank","skins":"Zodiac"}}
+{"timestamp":"2024-03-06T05:28:09.113Z","method":"PUT","path":"/posts/2/skins","payload":{"title":"Cookie Run Kindom's Best Tank","cookieName":"Financier","battle_role":"Tank","abilityDesc":"Shield, healing and light type damage","content":"Best tank","skins":"Zodiac skin"}}
