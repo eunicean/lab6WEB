@@ -74,7 +74,7 @@ app.post('/posts', async (req, res, next) => {
 // Endpoint para obtener un post por su ID
 app.get('/posts/:postId', async (req, res, next) => {
   try {
-    const postId = req.params.postId;
+    const {postId} = req.params;
     const post = await getPostByID(postId);
 
     if (post) {

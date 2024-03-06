@@ -22,7 +22,7 @@ services:
       - "./mysql-data:/var/lib/mysql"
     environment:
       MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: blog_db
+      MYSQL_DATABASE: blog
       MYSQL_USER: blog_user
-      MYSQL_PASSWORD: blog_password
+      MYSQL_PASSWORD: 1144dfafsd
 

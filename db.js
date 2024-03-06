@@ -1,7 +1,7 @@
 import conn from './conn.js'
 
 export async function getAllPosts() {
- const [rows] = await conn.query('SELECT * FROM blog_posts')
+ const [rows] = await conn.query('SELECT * FROM blog_crk_posts')
  return rows
 }
 
@@ -11,24 +11,19 @@ export async function createPost(
     battle_role,
     abilityDesc,
     content,
-    skins) {
+    skins
+) {
     const [result] = await conn.query('INSERT INTO blog_crk_posts (title, cookie_name, battle_role, ability, content, skins) VALUES (?, ?, ?, ?, ?, ?)', 
-    [
-        title, 
-        cookieName,
-        battle_role,
-        abilityDesc,
-        content,
-        skins
-    ])
+    [title,cookieName,battle_role,abilityDesc,content,skins]
+    )
     const rowInserted = await getPostByID(result.insertId)
     return result
 }
 
 export async function getPostByID(blogPostID) {
-    const [rows] = conn.query('SELECT * FROM blog_crk_posts WHERE id = ?',
+    const [rows] = await conn.query('SELECT * FROM blog_crk_posts WHERE id = ?',
     [blogPostID])
-    return rows
+    return rows.length?rows[0]:null
 }
 
 export async function deletePost(blogPostID) {
